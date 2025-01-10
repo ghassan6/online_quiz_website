@@ -6,6 +6,20 @@ body{
     background-color: #D9EAFD;
 }
 
+   body{
+       background-color: #F8FAFC;
+   }
+   .custom-margin {
+      
+     margin: 250px;
+   }
+   .content1{
+    display: flex;
+   }
+  h1{
+   font-size: 55px;
+  }
+  
 .custom-margin {
   margin: 250px;
 }
@@ -15,10 +29,130 @@ h1 {
 }
 
 .img1{
+   
+   margin: 100px;
+   margin-top: 200px;
+   width: 500px;
+   height: 550px;
   margin: 100px;
   margin-top: 200px;
   width: 500px;
   height: 550px;
+}
+h5{
+    font-size: 17px;
+}
+/* ----------- */
+h2{
+    text-align: center;
+}
+.carts{
+padding: 20px;
+display: flex;
+justify-content: center;
+}
+
+ .carts .cart{
+    width: 50%;
+text-align: center;
+background-color:#BCCCDC;
+padding: 30px 20px;
+border-radius: 10px;
+box-shadow: 0px 5px 20px 0px #688eb9;
+align-items: center;
+}
+ 
+ .carts .cart h3{
+color:#1c1e22;
+font-size: 24px;
+margin-bottom: 20px;
+}
+ .carts .cart p{
+color: #505052;
+margin-bottom: 40px;
+}
+
+ .carts .cart a{
+padding: 15px 20px;
+background-color: #BCCCDC;
+border: 1px solid #BCCCDC;
+color: #fff;
+border-radius: 5px;
+font-weight: 500;
+text-decoration: none;
+transition: 0.3s; 
+}
+
+ .carts .cart a:hover{
+background-color: #fff;
+color:  #BCCCDC;
+}
+/* --------- */
+.video{
+    margin-top: 100px;
+    background-color: #D9EAFD;
+    height: 500px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+h3{
+    text-align: center;
+    padding: 40px;
+}
+
+/* ------------ */
+.coll{
+  display: flex;
+    margin-top: 100px;
+    background-color:#FFCDEA;
+    height: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.right h4{
+font-size: 40px;
+padding-top: 40px;
+padding-left: 60px;
+margin-top: 35px;
+}
+
+
+.right p{
+    font-size: 20px;
+ padding-left: 60px;
+ margin-bottom: 40px;
+}
+
+.right a{
+    padding: 20px 20px;
+    background-color: #F8FAFC;
+    border: 1px solid #F8FAFC;
+    color:#9AA6B2;
+    border-radius: 5px;
+    margin: 70px;
+    text-decoration: none;
+    transition: 0.3s; 
+  font-size: 20px;
+ 
+ 
+    }
+    
+     .right a:hover{
+    background-color: #BCCCDC;
+    color:  #F8FAFC;
+   
+
+}
+    
+
+.left img{
+    height: 300px;
+    width:  400px;
+    margin: 80px;
+    margin-top: 30px;
 }
 
 /*  questions */
