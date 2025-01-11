@@ -84,7 +84,7 @@ button a{
       font-weight: 500; 
       color: #090a0b; 
       margin-bottom: 0.5rem;
-     
+    
   }
 
   .form-control {
@@ -213,6 +213,23 @@ font-size: 40px;
 
 .next-btn {
   background-color: #D9EAFD ;
+}
+
+.result-question {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.correct, .wrong {
+  padding: 0.3rem 0.5rem;
+}
+.correct {
+  background-color: #198754;
+}
+
+.wrong {
+  background-color: #dc3545;
 }
 
 .custom-btn{
