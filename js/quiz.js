@@ -56,11 +56,11 @@ function displayQuestion() {
     answers.innerHTML = "";
 
 
- if (index < questions.length) {
+if (index < questions.length) {
     let currentQuestion = questions[index];
     question_text.innerText = currentQuestion.question;
 
-   currentQuestion.answers.forEach(answer => {
+currentQuestion.answers.forEach(answer => {
     let button = document.createElement("button");
     button.classList.add("btn", "mt-2", "answer-btn");
     button.innerHTML = answer;
@@ -73,17 +73,17 @@ function displayQuestion() {
     })
     answers.appendChild(button);
 
-   })
- } else {
+})
+} else {
     question_text.innerHTML = "Your score:";
     answers.innerHTML = "";
- }
+}
 
 }
 
 nextBtn.addEventListener("click", () => {
     // display the correct answer
-   checkAnswer(selectedAnswer, questions[index].correctAns, selectedBtn)
+checkAnswer(selectedAnswer, questions[index].correctAns, selectedBtn)
     
     setTimeout(() => {
         index++;

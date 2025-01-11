@@ -32,7 +32,7 @@ h1 {
 body {
   background-color: #F8FAFC; 
   height: 100vh; 
-  display: flex;
+  /* display: flex; */
   align-items: center; 
   justify-content: center;
   font-family: Arial, sans-serif; 
@@ -141,7 +141,7 @@ button.btn-primary:hover {
       font-weight: 500; 
       color: #090a0b; 
       margin-bottom: 0.5rem;
-     
+    
   }
 
   .form-control {
