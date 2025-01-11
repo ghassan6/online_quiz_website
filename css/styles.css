@@ -32,7 +32,7 @@ h1 {
 body {
   background-color: #F8FAFC; 
   height: 100vh; 
-  display: flex;
+  /* display: flex; */
   align-items: center; 
   justify-content: center;
   font-family: Arial, sans-serif; 
@@ -323,3 +323,19 @@ margin-top: 35px;
   background-color: #D9EAFD ;
 }
 
+.result-question {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.correct, .wrong {
+  padding: 0.3rem 0.5rem;
+}
+.correct {
+  background-color: #198754;
+}
+
+.wrong {
+  background-color: #dc3545;
+}
