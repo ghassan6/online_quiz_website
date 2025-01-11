@@ -323,3 +323,19 @@ margin-top: 35px;
   background-color: #D9EAFD ;
 }
 
+.result-question {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.correct, .wrong {
+  padding: 0.3rem 0.5rem;
+}
+.correct {
+  background-color: #198754;
+}
+
+.wrong {
+  background-color: #dc3545;
+}
