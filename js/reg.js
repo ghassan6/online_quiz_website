@@ -16,7 +16,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     // Regex validate
     const nameRegex = /^[a-zA-Z\s]{3,50}$/; // Name between 3 and 50 characters
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // simple Email
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // 8-character password with letter and number
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*]{8,}$/; // 8-character password with letter and number
     let isValid = true;
 
     // name validate
