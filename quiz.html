@@ -11,54 +11,63 @@
 </head>
 <body>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src="resources/images/logo2.jpg" alt="Logo" width="95" height="70" class="d-inline-block">
-                <span style="font-size: 50px;"> Quiz <span style="color:palevioletred;">Whiz</span></span> 
-            </a>
-          </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+      
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+          <img src="logo2.jpg" alt="Logo" width="95" height="70" class="d-inline-block">
+              <span style="font-size: 50px;"> Quiz <span style="color:palevioletred;">Whiz</span></span> 
+          </a>
+      </div>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <form class="d-flex" role="search">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Languages
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Arabic</a></li>
-                        <li><a class="dropdown-item" href="#">English</a></li>
-                      </ul>
-                    </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <form class="d-flex" role="search">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Languages
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Arabic</a></li>
+                      <li><a class="dropdown-item" href="#">English</a></li>
                   </ul>
+                  </li>
+              </ul>
 
-                  <button type="button" class="btn btn-outline-secondary me-3">Logout</button>
-
-            </form>
-          </div>
-        </div>
-      </nav>
+              <button type="button" class="btn btn-outline-secondary me-3">Logout</button>
+             
+          </form>
+      </div>
+      </div>
+  </nav>
 
       <!-- card for questions -->
-      <div class="d-flex justify-content-center ">
+      <div class="d-flex justify-content-center m-5">
         <div class="question  flex-column">
-            <div class="question-body">
-                <p class="question-text"></p>
-                <div class="answers mt-4"></div>
-            </div>
 
-            <div class="question-footer d-flex">
+          <!-- <div class="question-footer">
+            <div class="timer">
+              <p id="cd"><span class="minutes"></span><span class="seconds"></span></p>
+            </div>
+            </div> -->
+
+            <div class="question-body">
+              <div class="question-footer">
                 <div class="timer">
                   <p id="cd"><span class="minutes"></span><span class="seconds"></span></p>
                 </div>
+                </div>
+                <p class="question-text mt-5"></p>
+                <div class="answers mt-5 fixed"></div>
                 <button class="btn ms-auto next-btn">Next</button>
             </div>
+
+           </div>
           </div>
       </div>
 

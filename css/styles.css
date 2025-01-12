@@ -29,6 +29,8 @@ h1 {
    width: 500px;
    height: 550px;
 }
+
+/* register */
 body {
   background-color: #F8FAFC; 
   height: 100vh; 
@@ -198,6 +200,7 @@ h5{
 h2{
     text-align: center;
 }
+
 .carts{
 padding: 20px;
 display: flex;
@@ -291,15 +294,11 @@ margin-top: 35px;
  
  
     }
-    
-     .right a:hover{
+  
+.right a:hover{
     background-color: #BCCCDC;
     color:  #F8FAFC;
-   
-
 }
-    
-
 .left img{
     height: 300px;
     width:  400px;
@@ -309,18 +308,59 @@ margin-top: 35px;
 
 /*  questions */
 
+body{
+  background-color:#d6e0ea ;
+}
+
+
 .question {
   color: #000000;
-  margin-top: 15rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn.answer-btn {
-  width: 48%;
+  background-color: #D9EAFD;
+ font-size: 20px;
+ width: 300px;
+ margin-left: 140px;
+}
+.btn.answer-btn:hover {
+  background-color:palevioletred; 
+  border-color: #dae6f3; 
+}
 
+.question-body{
+  background-color: #688eb9;
+  width: 600px;
+  height: 560px;
+  border-radius:20px;
+  box-shadow: 25px 25px 25px 25px rgba(0, 0, 0, 0.3);
+}
+
+.mt-5 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  flex-direction: column-reverse;
+  font-size: 30px;
 }
 
 .next-btn {
-  background-color: #D9EAFD ;
+  background-color: #dae6f3; 
+  border-color: #dae6f3; 
+  font-weight: bold; 
+  padding: 1rem; 
+  border-radius: 3rem;
+  font-size: 1rem; 
+  color: rgb(14, 14, 14);
+  margin-top: 20px; 
+}
+
+.next-btn:hover {
+  background-color:palevioletred; 
+  border-color: #dae6f3; 
 }
 
 .result-question {
@@ -332,6 +372,7 @@ margin-top: 35px;
 .correct, .wrong {
   padding: 0.3rem 0.5rem;
 }
+
 .correct {
   background-color: #198754;
 }
@@ -339,3 +380,9 @@ margin-top: 35px;
 .wrong {
   background-color: #dc3545;
 }
+
+.question-footer{
+ margin: 7px;
+ font-size: 35px;
+}
+
