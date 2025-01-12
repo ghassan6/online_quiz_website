@@ -31,6 +31,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     if (!emailRegex.test(email.value)) {
         emailError.textContent = 'Please enter a valid email.';
         isValid = false;
+        console.log("asd")
     } else {
         emailError.textContent = '';
     }
