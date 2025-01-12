@@ -11,58 +11,70 @@
 
 </head>
 <body>
-   
-        <div id="demo" class="container">
+
+<div class="d-flex">
+    <div class="col-4">
+     <div class="bg-longin mt-5">
+        <img src="/resources/images/1212.jpg">
+     </div>
+    </div>
+
+    <div class="col-7" style="justify-items: center;">
+        <div id="demo" class="container mt-5 ">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-5">
-                    <div class="card">
+                    <div class="card mt-5">
+                        
                         <div class="card-body p-4">
-                            <h2 class="text-center mb-4">Student Registration</h2>
+                            <h2 class="text-center mb-3">Student Registration</h2>
                             <form id="form" action="">
                             <!-- Full Name -->
                             <div class="mb-3">
-                                <label for="full-name" class="form-label">Full Name</label>
-                                <input id="full-name" type="text" class="form-control">
+                                
+                                <input id="full-name" type="text" placeholder="Username" class="form-control">
                                 <div id="name-error" class="text-danger"></div>
                             </div>
     
                             <!-- Email -->
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input id="email" type="text" class="form-control">
+                                
+                                <input id="email" type="text" placeholder="Email"class="form-control">
                                 <div id="email-error" class="text-danger"></div>
                             </div>
     
                             <!-- Password -->
                             <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input id="password" type="password" class="form-control">
+                               
+                                <input id="password" type="password" placeholder="Password" class="form-control">
                                 <div id="pass-error" class="text-danger"></div>
                             </div>
     
                             <!-- Confirm Password -->
                             <div class="mb-4">
-                                <label for="confirm-pass" class="form-label">Confirm Password</label>
-                                <input id="confirm-pass" type="password" class="form-control">
+                                
+                                <input id="confirm-pass" type="password" placeholder="Confirm Password" class="form-control">
                                 <div id="confirm-pass-error" class="text-danger"></div>
                             </div>
     
                             <!-- Button -->
-                            <button id="submit" type="submit" class="btn btn-primary w-100 mb-3">Sign in</button>
-                        </div>
-                        </form>
-                    </div>
-    
-                    <!-- Login Link -->
-                    <div class="text-center">
-                        <p class="mb-0">Already have an account? 
-                            <a href="login.html" class="text-decoration-none text-primary">Login here</a>
-                        </p>
+                            <button id="submit" type="submit" class="btn btn-primary w-100 mb-3" class="button">Sign in</button>
+
+                            <div class="text-center">
+                                <p class="mb-0">Already have an account? 
+                                    <a href="login.html" class="text-decoration-none text-primary">Login here</a>
+                                </p>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
-   
-    
+    </div>
+
+
+
+
+</div>
+
 </body>
 </html>
