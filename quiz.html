@@ -8,9 +8,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/quiz.js" defer></script>
-   
+   <style>
+    body{
+      background-color:#BCCCDC ;
+    }   </style>
 </head>
-<body>
+<body class="bg">
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -52,11 +55,13 @@
         <div class="question flex-column">
 
             <div class="question-body">
-              <div class="question-footer">
-                <div class="timer"></div></div>
-                <p class="question-text mt-5"></p>
+      
+              <div class="timer" >3 : 0</div>
+            
+            <p class="question-text mt-5"></p>
+               
                 <div class="answers mt-5 fixed"></div>
-                <button class="btn ms-auto next-btn">Next</button>
+                <button class="btn ms-auto mt-3 px-4 next-btn">Next</button>
             </div>
 
            </div>

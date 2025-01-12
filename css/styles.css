@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #F8FAFC; 
+  /* background-color: #F8FAFC;  */
   height: 100vh; 
   /* display: flex; */
   align-items: center; 
@@ -9,7 +9,9 @@ body {
   font-family: Arial, sans-serif; 
   direction: ltr; 
 }
-
+.bg{
+  background-color:#BCCCDC ;
+}
 .bold {
   font-weight: 700;
 }
@@ -223,47 +225,47 @@ h3{
 
 .btn.answer-btn {
   background-color: #D9EAFD;
-  width: 50%;
-  padding: 0 4rem;
+  width: 40%;
+  padding: 2rem 4rem;
   align-self: center;
-  margin: 1% 0;
+  margin: 1% 2%;
   font-size: large;
 }
 
 
-.btn.answer-btn:hover {
-  background-color:palevioletred; 
+.answer-btn:hover {
+  background-color:#BCCCDC; 
   border-color: #dae6f3; 
+  color: #000000;
 }
 
 .question-body{
-  background-color: #688eb9;
+  background-color: white;
   border-radius:20px;
-  box-shadow: 25px 25px 25px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.3);
   padding: 1rem 3rem; 
 }
 
-.mt-5 {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: stretch;
+.question-text  {
+  
   flex-direction: column-reverse;
-  font-size: 30px;
+  font-size: 40px;
 }
+
 
 .next-btn {
   background-color: #dae6f3; 
   border-color: #dae6f3; 
   font-weight: bold; 
   padding: 1rem; 
-  border-radius: 3rem;
+  border-radius: 1rem;
   font-size: 1rem; 
   color: rgb(14, 14, 14);
-  margin-top: 20px; 
+   
 }
 
 .next-btn:hover {
-  background-color:palevioletred; 
+  background-color:#BCCCDC; 
   border-color: #dae6f3; 
 }
 
@@ -286,11 +288,9 @@ h3{
   background-color: #dc3545;
 }
 
-.question-footer{
- margin: 7px;
- font-size: 35px;
+.black{
+  color: black;
 }
-
 
 .custom-btn{
   background-color:palevioletred;
@@ -301,3 +301,49 @@ h3{
   background-color:rgb(168, 162, 162);
 }
 
+/* foter */
+#footer{
+  background-color: var(--primary-color-2);
+  padding-top: 60px ;
+}
+.email{
+
+  text-align: center;
+  color: var(--primary-color-3);
+  font-weight: var(--font-weight);
+  font-size: 2rem;
+}
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.social a{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:var(--primary-color-3);
+  border-radius: 50%;
+  margin: 20px ;
+  color:var(--primary-color-2);
+  text-decoration: none;
+  font-size: 20px;
+}
+.social a:hover{
+  transform: scale(1.3);
+  transition: .3s;
+ 
+}
+.end {
+  margin-top: 30px;
+  position:relative;
+ color:#fff;
+ bottom: 30px;
+ font-size: 14px;
+ text-align: center;
+
+}
