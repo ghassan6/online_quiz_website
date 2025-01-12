@@ -31,6 +31,6 @@ document.getElementById("startQuizBtn").addEventListener('click', function() {
         email_error.innerHTML = "";
     }
     else {
-
+        window.location.href = 'dashboard.html'
     }
 });
