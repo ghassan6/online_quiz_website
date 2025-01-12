@@ -164,6 +164,11 @@ transition: 0.3s;
 
 /* --------- */
 .video{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
     margin-top: 100px;
     background-color: #D9EAFD;
     height: 500px;
@@ -216,7 +221,6 @@ font-size: 40px;
 
 .question {
   color: #000000;
-  margin-top: 15rem;
 }
 
 .btn.answer-btn {
