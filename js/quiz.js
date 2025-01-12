@@ -16,6 +16,7 @@ let answers = document.querySelector(".answers")
 let nextBtn = document.querySelector(".next-btn");
 let timer = document.querySelector(".timer");
 let logoutBtn = document.getElementById("logout");
+let question_body = document.querySelector(".question-body");
 
 
 // disable the next button by default
@@ -92,7 +93,9 @@ currentQuestion.answers.forEach(answer => {
     timer.innerHTML = "";
     sessionStorage.setItem("userAnswers", userAnswers);
     sessionStorage.setItem("questions", JSON.stringify(questions));
-    // displayResult();
+
+    addBtn();
+    nextBtn.style.display = "none";
  }
 
 }
@@ -153,7 +156,26 @@ function startTimer(amount) {
 
 }
 
+function addBtn() {
+    let resultButton = document.createElement("button");
+    
+    resultButton.innerHTML = "Show Result";
+    resultButton.classList.add("next-btn", "px-4", "mt-3" ,"btn", "ms-3")
+    resultButton.addEventListener("click", () => {
+        window.location.href = 'result.html';
+    })
 
+    let homeButton = document.createElement("button");
+    homeButton.innerHTML = "Back";
+    homeButton.classList.add("next-btn", "px-4", "mt-3" ,"btn" , "ms-3");
+    homeButton.addEventListener("click", () => {
+        window.location.href = 'dashboard.html';
+    })
+
+    question_body.appendChild(homeButton)
+    question_body.appendChild(resultButton)
+
+}
 // function displayResult() {
 //     nextBtn.disabled = true;
 //     nextBtn.style.display = "none";
