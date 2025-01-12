@@ -14,6 +14,7 @@ let question_text = document.getElementsByClassName("question-text")[0];
 let answers = document.querySelector(".answers")
 let nextBtn = document.querySelector(".next-btn");
 let timer = document.querySelector(".timer");
+let logoutBtn = document.getElementById("logout");
 
 // disable the next button by default
 nextBtn.disabled = true;
@@ -54,7 +55,6 @@ function generateQuestions(data) {
 }
 
 function displayQuestion() {
-    console.log(`index: ${currentQuestionIndex}`)
     selectedAnswer = null;
     selectedBtn = null;
     nextBtn.disabled = true;
@@ -101,7 +101,7 @@ nextBtn.addEventListener("click", () => {
     setTimeout(() => {
         currentQuestionIndex++;
         displayQuestion();
-    }, 1000)
+    }, 3000)
 })
 
 
@@ -111,13 +111,9 @@ function checkAnswer(selectedAnswer, correctAnswer, selectedBtn) {
         score++;
         selectedBtn.classList.add("btn-success");
     }
-    else {
-        selectedBtn.classList.add("btn-danger");
-    }
-
-    console.log(`cor: ${correctAnswer} user: ${selectedAnswer}`);
+    else selectedBtn.classList.add("btn-danger");
+    
     userAnswers.push(selectedAnswer);
-
 }
 
 
@@ -194,5 +190,8 @@ function displayResult() {
         }
     }
 }
-console.log(questions)
 
+logoutBtn.addEventListener("click", () => {
+    sessionStorage.clear();
+    window.location.href = 'index.html';
+})
