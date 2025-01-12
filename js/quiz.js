@@ -8,6 +8,7 @@ let timerInterval;
 let score = 0;
 let userAnswers = [];
 
+let file = sessionStorage.getItem("quiz");
 
 // declare DOM elements
 let question_text = document.getElementsByClassName("question-text")[0];
@@ -15,6 +16,7 @@ let answers = document.querySelector(".answers")
 let nextBtn = document.querySelector(".next-btn");
 let timer = document.querySelector(".timer");
 let logoutBtn = document.getElementById("logout");
+
 
 // disable the next button by default
 nextBtn.disabled = true;
@@ -28,14 +30,16 @@ function randomQuestions() {
     return indices;
 }
 
-
-fetch ('../resources/questions.json')
-.then (response => response.json())
-.then (data => {
-    generateQuestions(data);
-    displayQuestion();
+function fetchJSON() {
+    fetch (`../resources/${file}.json`)
+    .then (response => response.json())
+    .then (data => {
+        generateQuestions(data);
+        displayQuestion();
 })
+}
 
+fetchJSON()
 
 function generateQuestions(data) {
     // get 5 random indices 

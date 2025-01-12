@@ -1,0 +1,67 @@
+[
+    {
+        "question": "Which is the correct sentence?",
+        "answers": ["She go to the store.", "She goes to the store.", "She going to the store.", "She gone to the store."],
+        "correctAns": "She goes to the store."
+    },
+
+    {
+        "question": "Complete the sentence: 'I have never _____ to that restaurant.'",
+        "answers": ["been", "was", "be", "being"],
+        "correctAns": "been"
+    },
+
+    {
+        "question": "What is the past tense of 'run'?",
+        "answers": ["ran", "runned", "run", "running"],
+        "correctAns": "ran"
+    },
+
+    {
+        "question": "Synonym for 'happy'?",
+        "answers": ["sad", "joyful", "angry", "tired"],
+        "correctAns": "joyful"
+    },
+
+    {
+        "question": "Complete the sentence: 'She _____ to the market every day.'",
+        "answers": ["go", "goes", "going", "gone"],
+        "correctAns": "goes"
+    },
+
+    {
+        "question": "Which sentence is correct?",
+        "answers": ["He don't like pizza.", "He doesn't likes pizza.", "He doesn't like pizza.", "He don't likes pizza."],
+        "correctAns": "He doesn't like pizza."
+    },
+
+    {
+        "question": "Complete the sentence: 'I am looking _____ my keys.'",
+        "answers": ["on", "at", "for", "to"],
+        "correctAns": "for"
+    },
+
+    {
+        "question": "Correct comparative form?",
+        "answers": ["She is more taller than him.", "She is more tall than him.", "She is taller than him.", "She is tallest than him."],
+        "correctAns": "She is taller than him."
+    },
+
+    {
+        "question": "Which sentence has subject-verb agreement error?",
+        "answers": ["The dog barks loudly.", "The dogs bark loudly.", "The dog bark loudly.", "She sings beautifully."],
+        "correctAns": "The dog bark loudly."
+    },
+
+    {
+        "question": "Plural of 'child'?",
+        "answers": ["childs", "children", "childes", "childrens"],
+        "correctAns": "children"
+    },
+
+    {
+        "question": "Which is passive voice?",
+        "answers": ["The teacher explained the lesson.", "The lesson was explained by the teacher.", "The teacher explains the lesson.", "The lesson explains the teacher."],
+        "correctAns": "The lesson was explained by the teacher."
+    }
+]
