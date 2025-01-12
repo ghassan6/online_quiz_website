@@ -153,14 +153,14 @@ body {
   .btn-primary {
       color: #090a0b;
       padding: 0.75rem;
-      background-color: #D9EAFD; /* اللون الأزرق */
+      background-color: #D9EAFD; 
       border-color: #D9EAFD;
       font-size: 1rem;
       border-radius: 0.375rem;
   }
 
   .btn-primary:hover {
-      background-color: #c8cacc; /* تأثير hover لتغيير اللون */
+      background-color: #c8cacc; 
       border-color: #D9EAFD;
   }
 
