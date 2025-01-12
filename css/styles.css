@@ -164,11 +164,6 @@ justify-content: center;
 
 /* --------- */
 .video{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
     margin-top: 100px;
     background-color: #D9EAFD;
     height: 500px;
@@ -219,26 +214,70 @@ h3{
 
 .question {
   color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+
 }
 
-.btn.answer-btn {
-  width: 48%;
 
+.btn.answer-btn {
+  background-color: #D9EAFD;
+  width: 50%;
+  padding: 0 4rem;
+  align-self: center;
+  margin: 1% 0;
+  font-size: large;
+}
+
+
+.btn.answer-btn:hover {
+  background-color:palevioletred; 
+  border-color: #dae6f3; 
+}
+
+.question-body{
+  background-color: #688eb9;
+  border-radius:20px;
+  box-shadow: 25px 25px 25px 25px rgba(0, 0, 0, 0.3);
+  padding: 1rem 3rem; 
+}
+
+.mt-5 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  flex-direction: column-reverse;
+  font-size: 30px;
 }
 
 .next-btn {
-  background-color: #D9EAFD ;
+  background-color: #dae6f3; 
+  border-color: #dae6f3; 
+  font-weight: bold; 
+  padding: 1rem; 
+  border-radius: 3rem;
+  font-size: 1rem; 
+  color: rgb(14, 14, 14);
+  margin-top: 20px; 
+}
+
+.next-btn:hover {
+  background-color:palevioletred; 
+  border-color: #dae6f3; 
 }
 
 .result-question {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  border: solid;
 }
 
 .correct, .wrong {
   padding: 0.3rem 0.5rem;
 }
+
 .correct {
   background-color: #198754;
 }
@@ -246,6 +285,12 @@ h3{
 .wrong {
   background-color: #dc3545;
 }
+
+.question-footer{
+ margin: 7px;
+ font-size: 35px;
+}
+
 
 .custom-btn{
   background-color:palevioletred;
@@ -255,3 +300,4 @@ h3{
 .custom-btn:hover{
   background-color:rgb(168, 162, 162);
 }
+
