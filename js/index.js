@@ -1,19 +1,12 @@
-const apiKey = 'AIzaSyBSeumWG2wRbg0YKkT64x43axyHGvJBSqk'; // ضع مفتاح API هنا
+const apiKey = 'AIzaSyD-tFNX5zTtPggLzrEB5dXENkNUcvnqmtU'; // ضع مفتاح API هنا
 const query = 'calculus';
-// const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&key=${apiKey}`;
-let ID = "UukVP7Mg3TU";
+const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&key=${apiKey}`;
 
-
-// Fetch video details from the YouTube Data API
-fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${ID}&key=${apiKey}`)
-  .then(response => response.json())
-  .then(data => {
-
-
-    // Set the YouTube video in the iframe
-    const iframe = document.getElementById('youtube-player');
-    iframe.src = `https://www.youtube.com/embed/${ID}`;
-  })
-  .catch(error => {
-    console.error('Error fetching video details:', error);
-  });
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        const videoId = data.items[0].id.videoId; // الحصول على أول فيديو في النتائج
+        const iframe = document.getElementById('calculusVideo');
+        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+    })
+    .catch(error => console.error('Error fetching YouTube API:', error));
