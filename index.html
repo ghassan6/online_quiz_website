@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- home pag -->
+<!-- home page -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QuizWhiz</title>
     <script src="js/index.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -12,88 +12,111 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-        
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="resources/images/logo2.jpg" alt="Logo" width="95" height="70" class="d-inline-block">
-                <span style="font-size: 50px;"> Quiz <span style="color:palevioletred;">Whiz</span></span> 
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <!-- Logo & Brand Name -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="resources/images/logo2.jpg" alt="Logo" width="95" height="80" class="d-inline-block rounded-sm">
+        <span style="font-size: 3rem;" class="ms-2 mt-1">Quiz<span style="color:palevioletred;">Whiz</span></span>
+      </a>
+  
+      <!-- Navbar Toggler  -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Languages -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Languages
             </a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <form class="d-flex" role="search">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Languages
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Arabic</a></li>
-                        <li><a class="dropdown-item" href="#">English</a></li>
-                    </ul>
-                    </li>
-                </ul>
-
-                <button type="button" class="btn btn-outline-secondary me-3">Login</button>
-                <button type="button" class="btn btn-outline-secondary me-3">Sign</button>
-            </form>
-        </div>
-        </div>
-    </nav>
-
-
-    <div class="content1">
-
-        <div style="height: 750px;">
-            <div class="custom-margin">
-                <h1>Welcome to</h1>
-                <h1>Quiz <span style="color:palevioletred;">Whiz</span>!</h1>
-                <br>
-                <h5>We offer one type of test designed to assess your proficiency in the field of mathematics:</h5>
-            </div>
-        </div>
-    
-        <div style="height: 750px;"> 
-            <div class="img1">
-                <img src="resources/images/12.jpg" alt="Image" class="img-fluid"> 
-            </div>
-        </div>
-    
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Arabic</a></li>
+              <li><a class="dropdown-item" href="#">English</a></li>
+            </ul>
+          </li>
+        </ul>
+  
+        <!-- Login Button -->
+        <button type="button" class="btn text-light ms-3 custom-btn"><a href="login.html">Login</a></button>
+      </div>
     </div>
+  </nav>
+  
 
+  <div class="container-fluid d-flex my-5">
+    <div class="row w-100 ms-5">
+      
+      <!-- Left Section -->
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start mb-5  mb-md-0">
+        <div class="about fw-bold ">
+          <h1>Welcome to</h1>
+          <h1>Quiz<span style="color:palevioletred;">Whiz</span>!</h1>
+          <br>
+          <h4 class="me-5  fw-bold">We offer one type of test designed to assess your proficiency in the field of mathematics:</h4>
+        </div>
+        <button type="submit" class="btn m-5 fw-bold custom-btn">
+          <a class="fs-5" href="register.html">Get Started</a>
+        </button>
+      </div>
+      
+      <!-- Right Section (Image) -->
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <div class="img1">
+          <img src="resources/images/12.jpg" alt="Image" class="img-fluid rounded-lg w-100 mt-3">
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
 
-        <h2>About Our Quizzes</h2>
+<section class="my-5">
+  <h1 class="text-center fw-bold py-2">About Our Quizzes</h1>
             <div class="carts">
                 <div class="cart">
-                    <h3>Calculus</h3>
+                    <h3>Calculus 1</h3>
                     <p>The duration of the exam is 15 minutes. It consists of 5 questions. The exam mark is out of 10, and it is one way. The passing mark is 6.</p>
-                    <a href="#">Lets Go</a>
-                </div>
+                    <button type="submit" class="btn w-100 w-sm-50  fw-bold">
+                      <a class="fs-5 text-white" style="background-color: palevioletred;" href="register.html">Let’s Go</a>
+                    </button>
+                    
+                  </div>
             </div>
+ </section>
+  
+           
             <div class="video">
-            <h3>Calcolus video</h3>
+             <h3>Calculus video</h3>
             </div>
 
-
-            <div class="coll">
-                <div class="right">
-                    <h4>Got A Problem? <span style="color: #9AA6B2"> WeGotYou</span></h4>
-                    <p>“We rise by lifting others” is what we believe in. You won’t stay stuck in the process; All the support tickets are taken care of with high priority. You will hear back from us within 12 hours of receiving your mail.</p>
-                    <a href="#">Lets Go</a>
+            <section class=" coll ">
+              <div class=" container mt-5">
+                <div class="row align-items-center ">
+                  <!-- Right Section (Text) -->
+                  <div class="col-12 col-md-6 mb-4 mb-md-0 pe-5 ">
+                    <div class="right">
+                      <h4>Got A Problem? <span style="color: #9AA6B2;">WeGotYou</span></h4>
+                      <p>“We rise by lifting others” is what we believe in. You won’t stay stuck in the process; all the support tickets are taken care of with high priority. You will hear back from us within 12 hours of receiving your mail.</p>
+                      <button type="submit" class="btn w-100 w-sm-50  fw-bold">
+                        <a class="fs-5 text-white" style="background-color: #688eb9;" href="register.html">Let’s Go</a>
+                      </button>
+                    </div>
+                  </div>
+            
+                  <!-- Left Section (Image) -->
+                  <div class="col-12 col-md-6 p-3  d-flex justify-content-center  align-items-center ">
+                    <div class="left  w-75 h-50">
+                      <img src="resources/images/cool.jpg" alt="" class="img-fluid rounded-lg mt-1 ">
+                    </div>
+                  </div>
                 </div>
-
-                <div class="left">
-                    <img src="resources/images/cool.jpg" alt="">
-                </div>
-
-                
-            </div>
+              </div>
+            </section>
+            
 
 </body>
 </html>
