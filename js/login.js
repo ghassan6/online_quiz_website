@@ -6,15 +6,9 @@ document.getElementById("startQuizBtn").addEventListener('click', function() {
         alert("Please fill out your email & password!");
         return; 
     }
-
-    
-
-
-// //   هاي عشان ارسل البيانات
+//   هاي عشان ارسل البيانات
 //   localStorage.setItem("email", "user@example.com");
-// localStorage.setItem("password", "mySecurePassword123");
-    
-
+// localStorage.setItem("password", "mySecurePassword123")
 //
 let users = JSON.parse(localStorage.getItem("users")) || [];
 let userFound = false;
