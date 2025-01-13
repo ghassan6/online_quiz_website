@@ -71,7 +71,7 @@ function displayQuestion() {
         let currentQuestion = questions[currentQuestionIndex];
         question_text.innerText = currentQuestion.question;
 
-        startTimer(180);
+        startTimer(10);
         currentQuestion.answers.forEach(answer => {
             let button = document.createElement("button");
             button.classList.add("btn", "mt-2", "answer-btn");
@@ -94,14 +94,16 @@ function displayQuestion() {
     question_text.innerHTML = '';
     if(score >= 6) {
         question_body.style.backgroundColor  = "#77ff77";
+        question_body.style.color = "#ffffff"
         question_text.innerHTML = "You Passed!"
 
     }
     else {
         question_body.style.backgroundColor  = "#ff2546";
+        question_body.style.color = "#ffffff"
         question_text.innerHTML = "You failed"
     }
-
+    answers.style.color =  "#ffffff"
     answers.innerHTML = `Your Socre: ${score} out of 10`;
     timer.innerHTML = "";
     sessionStorage.setItem("userAnswers",JSON.stringify(userAnswers) );
@@ -167,14 +169,14 @@ function addBtn() {
     let resultButton = document.createElement("button");
     
     resultButton.innerHTML = "Show Result";
-    resultButton.classList.add("next-btn", "px-4", "mt-3" ,"btn", "ms-3")
+    resultButton.classList.add("res-btn","px-4", "mt-3" ,"btn", "ms-3")
     resultButton.addEventListener("click", () => {
         window.location.href = 'result.html';
     })
 
     let homeButton = document.createElement("button");
     homeButton.innerHTML = "Back";
-    homeButton.classList.add("next-btn", "px-4", "mt-3" ,"btn" , "ms-3");
+    homeButton.classList.add("res-btn", "px-4", "mt-3" ,"btn" , "ms-3");
     homeButton.addEventListener("click", () => {
         window.location.href = 'dashboard.html';
     })

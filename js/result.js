@@ -2,22 +2,11 @@ let resultContainer = document.querySelector(".result-container");
 let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
 let questions = JSON.parse(sessionStorage.getItem("questions"));
 let file = sessionStorage.getItem("quiz");
-logoutBtn=document.getElementById("logout");
-
-function fetchJSON() {
-    fetch (`../resources/${file}.json`)
-    .then (response => response.json())
-    .then (data => {
-        
-        displayResult();
-})
-}
-
-fetchJSON()
+let logoutBtn = document.getElementById("logout");
+let container = document.querySelector(".container-fluid .row");
 
 function displayResult() {
       
-    
         for(let i = 0; i < questions.length; i++) {
             let resultQuestion = document.createElement("div");
             resultQuestion.classList.add("result-question")
@@ -26,7 +15,6 @@ function displayResult() {
             let questionPara = document.createElement("p");
             questionPara.innerHTML = `${i+1}. ${questions[i].question}`;
             resultQuestion.appendChild(questionPara);
-    
     
             let selectedAnswerPara = document.createElement("p");
             
@@ -48,14 +36,26 @@ function displayResult() {
                 selectedAnswerPara.innerHTML = userAnswers[i];
                 selectedAnswerPara.classList.add("wrong")
     
-                // append both answers to the div
+                // append both correct answer and wrong answers to the div
                 resultQuestion.appendChild(correctAnsPara)
                 resultQuestion.appendChild(selectedAnswerPara);
                 resultContainer.appendChild(resultQuestion);
             }
         }
-    }
-    logoutBtn.addEventListener("click", () => {
-        sessionStorage.clear();
-        window.location.href = 'index.html';
-    })
+
+        // add a home button after finishing the quiz
+        let homeButton = document.createElement("btn");
+        homeButton.classList.add("res-btn","px-4", "mt-3" ,"btn", "ms-auto", "me-auto");
+        homeButton.innerHTML = "Home";
+        homeButton.addEventListener("click", () => {
+            window.location.href = 'dashboard.html'
+        })
+        container.appendChild(homeButton);
+}
+
+displayResult();
+
+logoutBtn.addEventListener("click", () => {
+    sessionStorage.clear();
+    window.location.href = 'index.html';
+})
