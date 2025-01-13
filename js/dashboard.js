@@ -3,11 +3,14 @@ let currentUserEmail = sessionStorage.getItem("email")
 let users = JSON.parse(localStorage.getItem("users"));
 let logout = document.getElementById("logout");
 
-// let startQuizBtn = document.getElementById("startQuiz");
 let startQuizBtn = document.querySelectorAll(".startQuiz")
 
 let currentUser = {};
 
+// added a security check to ensure that a user is logged in
+if(sessionStorage.getItem("email") == null) {
+    window.location.href = 'forbidden.html';
+}
 function getUser() {
 
     for(user of users) {
@@ -35,7 +38,3 @@ startQuizBtn.forEach(btn => {
         sessionStorage.setItem("quiz", file )
     })
 })
-// startQuizBtn.addEventListener("click", function() {
-//     let file = startQuizBtn.getAttribute("data-file")
-//     sessionStorage.setItem("quiz", file )
-// })

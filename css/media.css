@@ -1,0 +1,29 @@
+@media screen and (max-width: 380px) {
+    .reg-body > h2 {
+        font-size: 0.8rem;
+        word-wrap: break-word
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .signup-row, .reg-row {
+        flex-direction: column;
+    }
+
+    .signup-row > :nth-child(2) {
+        display: none;
+    }
+
+    .reg-row > :nth-child(1) {
+        display: none;
+    }
+
+    .reg-body > h2 {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .signup-row, .reg-row {
+        flex-direction: column;
+    }
+}

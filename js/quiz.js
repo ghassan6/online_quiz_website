@@ -19,6 +19,7 @@ let logoutBtn = document.getElementById("logout");
 let question_body = document.querySelector(".question-body");
 
 
+if(sessionStorage.getItem("email") == null) window.location.href = 'forbidden.html'
 // disable the next button by default
 nextBtn.disabled = true;
 
@@ -65,31 +66,43 @@ function displayQuestion() {
     nextBtn.disabled = true;
     answers.innerHTML = "";
 
+    timer.innerHTML = ""
+    if (currentQuestionIndex < questions.length) {
+        let currentQuestion = questions[currentQuestionIndex];
+        question_text.innerText = currentQuestion.question;
 
-if (currentQuestionIndex < questions.length) {
-    let currentQuestion = questions[currentQuestionIndex];
-    question_text.innerText = currentQuestion.question;
+        startTimer(180);
+        currentQuestion.answers.forEach(answer => {
+            let button = document.createElement("button");
+            button.classList.add("btn", "mt-2", "answer-btn");
+            button.innerHTML = answer;
 
-currentQuestion.answers.forEach(answer => {
-    let button = document.createElement("button");
-    button.classList.add("btn", "mt-2", "answer-btn");
-    button.innerHTML = answer;
+        // add eventlistener to check the correct answer
+        button.addEventListener("click", function() {
+            selectedAnswer = answer;
+            selectedBtn = this; 
+            if(selectedAnswer != null) nextBtn.disabled = false;
+        })
+        answers.appendChild(button);
 
-    // add eventlistener to check the correct answer
-    button.addEventListener("click", function() {
-        selectedAnswer = answer;
-        selectedBtn = this; 
-        if(selectedAnswer != null) nextBtn.disabled = false;
-    })
-    answers.appendChild(button);
+        // on the last questoin change the button to "submit"
+        if(currentQuestionIndex === 4) nextBtn.innerHTML = "Submit"
 
-   });
-
-   startTimer(180);
+    });
 
  } else {
-    question_text.innerHTML = `Your Socre: ${score} out of 5`;
-    answers.innerHTML = "";
+    question_text.innerHTML = '';
+    if(score >= 6) {
+        question_body.style.backgroundColor  = "#77ff77";
+        question_text.innerHTML = "You Passed!"
+
+    }
+    else {
+        question_body.style.backgroundColor  = "#ff2546";
+        question_text.innerHTML = "You failed"
+    }
+
+    answers.innerHTML = `Your Socre: ${score} out of 10`;
     timer.innerHTML = "";
     sessionStorage.setItem("userAnswers",JSON.stringify(userAnswers) );
     sessionStorage.setItem("questions", JSON.stringify(questions));
@@ -115,12 +128,8 @@ nextBtn.addEventListener("click", () => {
 
 function checkAnswer(selectedAnswer, correctAnswer, selectedBtn) {
 
-    if(selectedAnswer === correctAnswer) {
-        score++;
-        selectedBtn.classList.add("btn-success");
-    }
-    else selectedBtn.classList.add("btn-danger");
-    
+    if(selectedAnswer === correctAnswer) score += 2;
+
     userAnswers.push(selectedAnswer);
 }
 
