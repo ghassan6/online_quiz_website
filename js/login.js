@@ -20,7 +20,7 @@ document.getElementById("startQuizBtn").addEventListener('click', function() {
 
 
     for(let i = 0; i < users.length; i++) {
-        if(users[i].email === email.value && users[i].password === password.value ) {
+        if(users[i].email === email.value.trim() && users[i].password === password.value) {
             sessionStorage.setItem("email", users[i].email );
             sessionStorage.setItem("password", users[i].password);
             found = true;

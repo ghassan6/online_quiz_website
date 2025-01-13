@@ -28,7 +28,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     }
 
     // Email Validate
-    if (!emailRegex.test(email.value)) {
+    if (!emailRegex.test(email.value.trim())) {
         emailError.textContent = 'Please enter a valid email.';
         isValid = false;
         console.log("asd")
@@ -54,7 +54,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
     // If all the fields are correct
     if (isValid) {
-        let user = { fullName:fullName.value.trim(), email:email.value.trim(), password:password.value.trim() };
+        let user = { fullName:fullName.value.trim(), email:email.value.trim(), password:password.value };
 
         //Retrieve data stored in LocalStorage
         let users = JSON.parse(localStorage.getItem('users')) || []; //If there is no data, an empty matrix is configured
