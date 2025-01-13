@@ -3,7 +3,6 @@
 let questions = [];
 let currentQuestionIndex = 0;
 let selectedAnswer = null;
-let selectedBtn = null;
 let timerInterval;
 let score = 0;
 let userAnswers = [];
@@ -62,7 +61,6 @@ function generateQuestions(data) {
 
 function displayQuestion() {
     selectedAnswer = null;
-    selectedBtn = null;
     nextBtn.disabled = true;
     answers.innerHTML = "";
 
@@ -71,7 +69,7 @@ function displayQuestion() {
         let currentQuestion = questions[currentQuestionIndex];
         question_text.innerText = currentQuestion.question;
 
-        startTimer(10);
+        startTimer(180);
         currentQuestion.answers.forEach(answer => {
             let button = document.createElement("button");
             button.classList.add("btn", "mt-2", "answer-btn");
@@ -117,7 +115,7 @@ function displayQuestion() {
 
 nextBtn.addEventListener("click", () => {
     // display the correct answer
-   checkAnswer(selectedAnswer, questions[currentQuestionIndex].correctAns, selectedBtn);
+   checkAnswer(selectedAnswer, questions[currentQuestionIndex].correctAns);
 
    clearInterval(timerInterval) /* stop the timer */
     
@@ -128,7 +126,7 @@ nextBtn.addEventListener("click", () => {
 })
 
 
-function checkAnswer(selectedAnswer, correctAnswer, selectedBtn) {
+function checkAnswer(selectedAnswer, correctAnswer) {
 
     if(selectedAnswer === correctAnswer) score += 2;
 
@@ -143,13 +141,13 @@ function startTimer(amount) {
 
     let minutesLeft = parseInt(amount / 60);
     let secondsLeft = amount % 60;
-
+    timer.style.color = "black"
      timerInterval = setInterval(function() {
         // display remaining time
         timer.innerHTML = `${minutesLeft} : ${secondsLeft}`;
 
         // update the time every second
-        if(minutesLeft === 0 && secondsLeft ===0 ) {
+        if(minutesLeft === 0 && secondsLeft === 0 ) {
             clearInterval(timerInterval);
             userAnswers.push("not answered")
             currentQuestionIndex++;
@@ -160,7 +158,9 @@ function startTimer(amount) {
                 minutesLeft -= 1;
                 secondsLeft = 59;
             }
-           else secondsLeft -= 1;   
+           else secondsLeft -= 1; 
+           
+           if(minutesLeft === 0 && secondsLeft <= 28) timer.style.color = "red"
         }
     }, 1000)
 }

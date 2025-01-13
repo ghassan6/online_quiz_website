@@ -54,7 +54,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
     // If all the fields are correct
     if (isValid) {
-        let user = { fullName:fullName.value, email:email.value, password:password.value };
+        let user = { fullName:fullName.value.trim(), email:email.value.trim(), password:password.value.trim() };
 
         //Retrieve data stored in LocalStorage
         let users = JSON.parse(localStorage.getItem('users')) || []; //If there is no data, an empty matrix is configured

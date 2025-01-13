@@ -85,3 +85,7 @@
     background-color:  #dc3545;
     color: rgb(255, 255, 255); 
 }
+
+.timer {
+    font-size: 2.5rem;
+}

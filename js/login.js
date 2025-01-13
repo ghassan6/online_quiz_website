@@ -4,8 +4,7 @@ let password = document.getElementById("password");
 let email_error = document.getElementById("email-error");
 let pass_error = document.getElementById("pass-error");
 
-let currentEmail = "";
-let currentPass = "";
+sessionStorage.clear();
 
 document.getElementById("startQuizBtn").addEventListener('click', function() {
 
@@ -23,8 +22,6 @@ document.getElementById("startQuizBtn").addEventListener('click', function() {
     for(let i = 0; i < users.length; i++) {
         if(users[i].email === email.value && users[i].password === password.value ) {
             sessionStorage.setItem("email", users[i].email );
-            currentEmail = users[i].email;
-            currentPass = users[i].password;
             sessionStorage.setItem("password", users[i].password);
             found = true;
             break;
