@@ -19,6 +19,7 @@ let logoutBtn = document.getElementById("logout");
 let question_body = document.querySelector(".question-body");
 
 
+if(sessionStorage.getItem("email") == null) window.location.href = 'forbidden.html'
 // disable the next button by default
 nextBtn.disabled = true;
 
@@ -65,33 +66,45 @@ function displayQuestion() {
     nextBtn.disabled = true;
     answers.innerHTML = "";
 
+    timer.innerHTML = ""
+    if (currentQuestionIndex < questions.length) {
+        let currentQuestion = questions[currentQuestionIndex];
+        question_text.innerText = currentQuestion.question;
 
-if (currentQuestionIndex < questions.length) {
-    let currentQuestion = questions[currentQuestionIndex];
-    question_text.innerText = currentQuestion.question;
+        startTimer(180);
+        currentQuestion.answers.forEach(answer => {
+            let button = document.createElement("button");
+            button.classList.add("btn", "mt-2", "answer-btn");
+            button.innerHTML = answer;
 
-currentQuestion.answers.forEach(answer => {
-    let button = document.createElement("button");
-    button.classList.add("btn", "mt-2", "answer-btn");
-    button.innerHTML = answer;
+        // add eventlistener to check the correct answer
+        button.addEventListener("click", function() {
+            selectedAnswer = answer;
+            selectedBtn = this; 
+            if(selectedAnswer != null) nextBtn.disabled = false;
+        })
+        answers.appendChild(button);
 
-    // add eventlistener to check the correct answer
-    button.addEventListener("click", function() {
-        selectedAnswer = answer;
-        selectedBtn = this; 
-        if(selectedAnswer != null) nextBtn.disabled = false;
-    })
-    answers.appendChild(button);
+        // on the last questoin change the button to "submit"
+        if(currentQuestionIndex === 4) nextBtn.innerHTML = "Submit"
 
-   });
-
-   startTimer(180);
+    });
 
  } else {
-    question_text.innerHTML = `Your Socre: ${score} out of 5`;
-    answers.innerHTML = "";
+    question_text.innerHTML = '';
+    if(score >= 6) {
+        question_body.style.backgroundColor  = "#77ff77";
+        question_text.innerHTML = "You Passed!"
+
+    }
+    else {
+        question_body.style.backgroundColor  = "#ff2546";
+        question_text.innerHTML = "You failed"
+    }
+
+    answers.innerHTML = `Your Socre: ${score} out of 10`;
     timer.innerHTML = "";
-    sessionStorage.setItem("userAnswers", userAnswers);
+    sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
     sessionStorage.setItem("questions", JSON.stringify(questions));
 
     addBtn();
@@ -115,12 +128,8 @@ nextBtn.addEventListener("click", () => {
 
 function checkAnswer(selectedAnswer, correctAnswer, selectedBtn) {
 
-    if(selectedAnswer === correctAnswer) {
-        score++;
-        selectedBtn.classList.add("btn-success");
-    }
-    else selectedBtn.classList.add("btn-danger");
-    
+    if(selectedAnswer === correctAnswer) score += 2;
+
     userAnswers.push(selectedAnswer);
 }
 
@@ -176,47 +185,6 @@ function addBtn() {
     question_body.appendChild(resultButton)
 
 }
-// function displayResult() {
-//     nextBtn.disabled = true;
-//     nextBtn.style.display = "none";
-
-//     for(let i = 0; i < questions.length; i++) {
-//         let resultQuestion = document.createElement("div");
-//         resultQuestion.classList.add("result-question")
-
-//         // append the question
-//         let questionPara = document.createElement("p");
-//         questionPara.innerHTML = questions[i].question;
-//         resultQuestion.appendChild(questionPara);
-
-
-//         let selectedAnswerPara = document.createElement("p");
-        
-//         // check if the answer is correct
-//         if(questions[i].correctAns === userAnswers[i]) {
-//             selectedAnswerPara.innerHTML = userAnswers[i];
-//             selectedAnswerPara.classList.add("correct")
-//             resultQuestion.appendChild(selectedAnswerPara);
-//             timer.appendChild(resultQuestion);
-//         }
-
-//         // if the answer is not correct display both correct answer and user answer
-//         else {
-
-//             let correctAnsPara = document.createElement("p");
-//             correctAnsPara.classList.add("correct");
-//             correctAnsPara.innerHTML = questions[i].correctAns;
-
-//             selectedAnswerPara.innerHTML = userAnswers[i];
-//             selectedAnswerPara.classList.add("wrong")
-
-//             // append both answers to the div
-//             resultQuestion.appendChild(correctAnsPara)
-//             resultQuestion.appendChild(selectedAnswerPara);
-//             timer.appendChild(resultQuestion);
-//         }
-//     }
-// }
 
 logoutBtn.addEventListener("click", () => {
     sessionStorage.clear();

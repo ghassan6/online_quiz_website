@@ -8,59 +8,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/login.js" defer></script>
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
  
 <body>
 
-    <div class="d-flex">
-
-     
-
-     <div class="col-7" style="justify-items: center;">
-        <div id="demo2" class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5">
-                <div class="sungup">
-                    <div class="sungup-body p-4">
-                        <!-- login -->
-                        <h2 class="text-center mb-4 mt-4">Login Student</h2>
-                        <!-- email -->
-                        <div class="mb-3">
-                            
-                            <input type="email" id="email" placeholder="Email" class="form-control">
-                            <div id="email-error" class="text-danger"></div>
     
-                        </div>
-                        <!-- password -->
-                        <div class="mb-4">
-                            <input type="password" class="form-control" placeholder="Password" id="password">
-                            <div id="pass-error" class="text-danger"></div>
-    
-                        </div>
-                        <!-- Start -->
-                        <button type="submit" class="btn btn-primary w-100 mb-3 custom-btn" id="startQuizBtn"><a>Start Quiz</a></button>
-                        </form>
-                        <div class="text-center mt-3">
-                            Don't have an account?
-                            <a href="register.html" class="text-decoration-none">Register Here!</a>
-                        </div>
-                    </div>
-                </div>
+    <div class="row align-items-center justify-content-center gap-5 mt-5 signup-row">
+        <div class="col-4 signup-body p-4">
+            <h2 class="text-center mb-4 mt-4">Login Student</h2>
+
+            <div class="mb-3">
+                                    
+                <input type="text" id="email" placeholder="Email" class="form-control">
+                <div id="email-error" class="text-danger"></div>
+
             </div>
-    </div>
-    </div>
-    </div>
 
-    <div class="col-4">
-        <div class="bg-sunup mt-5">
-          <img src="/resources/images/1212.jpg" style="width:600px; height:600px; padding:50px;">
+            <div class="mb-4">
+                <input type="password" class="form-control" placeholder="Password" id="password">
+                <div id="pass-error" class="text-danger"></div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mb-3" id="startQuizBtn"><a>Log in</a></button>
+
+            <div class="text-center mt-3">
+                Don't have an account?
+                <a href="register.html" class="text-decoration-none">Register Here!</a>
+            </div>
         </div>
-      </div>
-
+        <div class="col-4">
+            <img src="resources/images/1212.jpg" alt="" class="w-100">
+        </div>
     </div>
-
-
-
-
 </body>
 </html>
