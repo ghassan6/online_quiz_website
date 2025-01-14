@@ -6,7 +6,24 @@ let logoutBtn = document.getElementById("logout");
 let container = document.querySelector(".container-fluid .row");
 
 function displayResult() {
-      
+
+        let header = document.createElement("div");
+        header.classList.add("result-head")
+        let correct = document.createElement("p");
+        correct.style.gridArea = "1/2"
+        correct.innerHTML = "Correct";
+        correct.classList.add("result-header")
+        let wrong = document.createElement("p");
+        wrong.style.gridArea = "1/3"
+        wrong.innerHTML = "Wrong";
+        wrong.classList.add("result-header")
+
+
+        header.appendChild(correct);
+        header.appendChild(wrong);
+
+        container.appendChild(header)
+
         for(let i = 0; i < questions.length; i++) {
             let resultQuestion = document.createElement("div");
             resultQuestion.classList.add("result-question")
@@ -28,7 +45,9 @@ function displayResult() {
     
             // if the answer is not correct display both correct answer and user answer
             else {
-    
+                // let span = document.createElement("span");
+                // span.innerHTML = "Correct: "
+                // resultQuestion.appendChild(span)
                 let correctAnsPara = document.createElement("p");
                 correctAnsPara.classList.add("correct");
                 correctAnsPara.innerHTML = questions[i].correctAns;

@@ -67,9 +67,8 @@ function displayQuestion() {
     timer.innerHTML = ""
     if (currentQuestionIndex < questions.length) {
         let currentQuestion = questions[currentQuestionIndex];
-        question_text.innerText = currentQuestion.question;
-
-        startTimer(180);
+        question_text.innerText = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+        startTimer(60);
         currentQuestion.answers.forEach(answer => {
             let button = document.createElement("button");
             button.classList.add("btn", "mt-2", "answer-btn");
@@ -78,7 +77,6 @@ function displayQuestion() {
         // add eventlistener to check the correct answer
         button.addEventListener("click", function() {
             selectedAnswer = answer;
-            selectedBtn = this; 
             if(selectedAnswer != null) nextBtn.disabled = false;
         })
         answers.appendChild(button);
@@ -160,7 +158,7 @@ function startTimer(amount) {
             }
            else secondsLeft -= 1; 
            
-           if(minutesLeft === 0 && secondsLeft <= 28) timer.style.color = "red"
+           if(minutesLeft === 0 && secondsLeft <= 19) timer.style.color = "red"
         }
     }, 1000)
 }

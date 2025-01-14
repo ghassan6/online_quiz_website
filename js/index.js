@@ -1,5 +1,5 @@
-// const apiKey = 'AIzaSyBk_VgvKLnFSCVK7xxHOGr-J8KvhJ_MA8w'; /* another API key */
-const apiKey = 'AIzaSyD-tFNX5zTtPggLzrEB5dXENkNUcvnqmtU'; /* omayma api */
+const apiKey = 'AIzaSyBk_VgvKLnFSCVK7xxHOGr-J8KvhJ_MA8w'; /* another API key */
+// const apiKey = 'AIzaSyD-tFNX5zTtPggLzrEB5dXENkNUcvnqmtU'; /* omayma api */
 const query = 'calculus';
 const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&key=${apiKey}`;
 // another api key AIzaSyBk_VgvKLnFSCVK7xxHOGr-J8KvhJ_MA8w

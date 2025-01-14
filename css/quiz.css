@@ -89,3 +89,17 @@
 .timer {
     font-size: 2.5rem;
 }
+
+.result-header {
+   width: fit-content;
+   justify-self: center;
+   margin: auto 0;
+   font-size: 3vh;
+}
+
+.result-head {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr ;
+    align-items: center;
+}
