@@ -49,14 +49,14 @@ input.form-control {
 .btn-primary {
   color: #090a0b;
   padding: 0.75rem;
-  background-color: #D9EAFD;
+  background-color: #ffffff !important;
   border-color: #D9EAFD;
   font-size: 1rem;
   border-radius: 3rem;
 }
 
 .btn-primary:hover {
-    background-color:#F8FAFC ; 
+    /* background-color:#F8FAFC ;  */
     color: #000000;
 }
 

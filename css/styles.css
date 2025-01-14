@@ -188,6 +188,7 @@ h3{
 }
 .custom-btn:hover{
   background-color:rgb(168, 162, 162);
+  transform: scale(1.05);
 }
 
 /* foter */
